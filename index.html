@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuffixSec — Security that scales with you</title>
+  <meta name="description" content="Enterprise-grade penetration testing, security audits, and vulnerability management. Protect your business with proactive security solutions trusted by industry leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+          </svg>
+          <span class="logo-text">Suffix<span class="text-primary">Sec</span></span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/features" class="nav-link">Features</a>
+          <a href="/plans" class="nav-link">Plans</a>
+          <a href="/faq" class="nav-link">FAQ</a>
+          <a href="/contact" class="nav-link">Contact Us</a>
+        </div>
+
+        <a href="/contact" class="btn btn-primary nav-cta">Book a Security Call</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/features" class="mobile-nav-link">Features</a>
+        <a href="/plans" class="mobile-nav-link">Plans</a>
+        <a href="/faq" class="mobile-nav-link">FAQ</a>
+        <a href="/contact" class="mobile-nav-link">Contact Us</a>
+        <a href="/contact" class="btn btn-primary mobile-cta">Book a Security Call</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="grid-background">
+        <div class="grid-pattern"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Trusted by 500+ enterprises worldwide</span>
+          </div>
+
+          <h1 class="hero-title">
+            SuffixSec — <span class="gradient-text">Security that scales<br class="hidden-mobile"> with you</span>
+          </h1>
+
+          <p class="hero-description">
+            Enterprise-grade penetration testing, security audits, and vulnerability management. Protect your business with proactive security solutions trusted by industry leaders.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn-primary btn-lg neon-cyan">
+              Book a Security Call
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="/plans" class="btn btn-outline btn-lg">
+              <svg class="btn-icon btn-icon-left text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="6 3 20 12 6 21 6 3"/>
+              </svg>
+              View Plans
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-value">500+</div>
+              <div class="stat-label">Clients Protected</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">10K+</div>
+              <div class="stat-label">Vulnerabilities Found</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">99.9%</div>
+              <div class="stat-label">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-fade"></div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-content reveal">
+          <p class="trust-label">Trusted by security-conscious enterprises</p>
+          <div class="trust-logos">
+            <div class="trust-logo">TechCorp</div>
+            <div class="trust-logo">SecureBank</div>
+            <div class="trust-logo">CloudNet</div>
+            <div class="trust-logo">DataFlow</div>
+            <div class="trust-logo">CyberShield</div>
+            <div class="trust-logo">InnovateTech</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Slider -->
+    <section class="highlights-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Why Choose Us</span>
+          <h2 class="section-title">Security Excellence at Every Step</h2>
+          <p class="section-description">Discover how SuffixSec delivers unmatched protection for your digital assets</p>
+        </div>
+
+        <div class="slider reveal" id="highlightsSlider">
+          <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Comprehensive Penetration Testing</h3>
+                    <p class="slide-description">Our expert team simulates real-world attacks to identify vulnerabilities before malicious actors can exploit them.</p>
+                    <span class="slide-stat">10,000+ tests conducted</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Advanced Vulnerability Detection</h3>
+                    <p class="slide-description">Using cutting-edge tools and methodologies, we uncover hidden security gaps across your entire infrastructure.</p>
+                    <span class="slide-stat">99.7% detection rate</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Detailed Security Reports</h3>
+                    <p class="slide-description">Receive actionable insights with prioritized recommendations and step-by-step remediation guidance.</p>
+                    <span class="slide-stat">48-hour delivery</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Rapid Incident Response</h3>
+                    <p class="slide-description">24/7 availability with our security experts ready to respond to any breach or security incident.</p>
+                    <span class="slide-stat">15-min response time</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Dedicated Security Team</h3>
+                    <p class="slide-description">Work with certified professionals who understand your industry-specific security requirements.</p>
+                    <span class="slide-stat">50+ certified experts</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="slide-icon-wrapper">
+                    <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/>
+                    </svg>
+                  </div>
+                  <div class="slide-text">
+                    <h3 class="slide-title">Compliance Assurance</h3>
+                    <p class="slide-description">Achieve and maintain compliance with ISO 27001, PCI DSS, SOC 2, HIPAA, and other standards.</p>
+                    <span class="slide-stat">100% audit success</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Previous slide">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+            </button>
+            <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Next slide">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Cards -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Our Services</span>
+          <h2 class="section-title">Comprehensive Security Solutions</h2>
+          <p class="section-description">From penetration testing to compliance, we cover all aspects of your cybersecurity needs</p>
+        </div>
+
+        <div class="features-grid reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Penetration Testing</h3>
+            <p class="feature-description">Simulated attacks to identify vulnerabilities in your systems, applications, and networks.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Security Audits</h3>
+            <p class="feature-description">Comprehensive assessments of your security posture against industry standards and best practices.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Vulnerability Management</h3>
+            <p class="feature-description">Continuous scanning, prioritization, and remediation tracking for all discovered vulnerabilities.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Incident Response</h3>
+            <p class="feature-description">24/7 rapid response team ready to contain, investigate, and recover from security incidents.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Compliance Readiness</h3>
+            <p class="feature-description">Expert guidance to achieve ISO 27001, PCI DSS, SOC 2, HIPAA, and GDPR compliance.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">DevSecOps Integration</h3>
+            <p class="feature-description">Embed security into your CI/CD pipeline with automated testing and developer training.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Our Process</span>
+          <h2 class="section-title">How We Secure Your Business</h2>
+          <p class="section-description">A proven methodology that delivers consistent, reliable security outcomes</p>
+        </div>
+
+        <div class="process-timeline reveal" id="processTimeline">
+          <!-- Desktop Timeline -->
+          <div class="timeline-desktop">
+            <div class="timeline-line">
+              <div class="timeline-line-fill"></div>
+            </div>
+            <div class="timeline-steps">
+              <div class="timeline-step">
+                <div class="step-indicator">Step 1</div>
+                <div class="step-icon-wrapper">
+                  <svg class="step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Discovery</h3>
+                <p class="step-description">We analyze your infrastructure, applications, and security requirements to define the scope.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="step-indicator">Step 2</div>
+                <div class="step-icon-wrapper">
+                  <svg class="step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Testing</h3>
+                <p class="step-description">Our experts conduct thorough penetration testing and vulnerability assessments.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="step-indicator">Step 3</div>
+                <div class="step-icon-wrapper">
+                  <svg class="step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Report</h3>
+                <p class="step-description">Receive detailed findings with severity ratings, evidence, and remediation recommendations.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="step-indicator">Step 4</div>
+                <div class="step-icon-wrapper">
+                  <svg class="step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Validation</h3>
+                <p class="step-description">We verify that all vulnerabilities have been properly addressed and your systems are secure.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Timeline -->
+          <div class="timeline-mobile">
+            <div class="mobile-step">
+              <div class="mobile-step-left">
+                <div class="mobile-step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                  </svg>
+                </div>
+                <div class="mobile-step-line"></div>
+              </div>
+              <div class="mobile-step-content">
+                <span class="mobile-step-indicator">Step 1</span>
+                <h3 class="mobile-step-title">Discovery</h3>
+                <p class="mobile-step-description">We analyze your infrastructure, applications, and security requirements to define the scope.</p>
+              </div>
+            </div>
+
+            <div class="mobile-step">
+              <div class="mobile-step-left">
+                <div class="mobile-step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                  </svg>
+                </div>
+                <div class="mobile-step-line"></div>
+              </div>
+              <div class="mobile-step-content">
+                <span class="mobile-step-indicator">Step 2</span>
+                <h3 class="mobile-step-title">Testing</h3>
+                <p class="mobile-step-description">Our experts conduct thorough penetration testing and vulnerability assessments.</p>
+              </div>
+            </div>
+
+            <div class="mobile-step">
+              <div class="mobile-step-left">
+                <div class="mobile-step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  </svg>
+                </div>
+                <div class="mobile-step-line"></div>
+              </div>
+              <div class="mobile-step-content">
+                <span class="mobile-step-indicator">Step 3</span>
+                <h3 class="mobile-step-title">Report</h3>
+                <p class="mobile-step-description">Receive detailed findings with severity ratings, evidence, and remediation recommendations.</p>
+              </div>
+            </div>
+
+            <div class="mobile-step">
+              <div class="mobile-step-left">
+                <div class="mobile-step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="mobile-step-content">
+                <span class="mobile-step-indicator">Step 4</span>
+                <h3 class="mobile-step-title">Validation</h3>
+                <p class="mobile-step-description">We verify that all vulnerabilities have been properly addressed and your systems are secure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Teaser -->
+    <section class="plans-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Pricing</span>
+          <h2 class="section-title">Security Plans for Every Business</h2>
+          <p class="section-description">Flexible pricing options designed to match your security needs and budget</p>
+        </div>
+
+        <div class="plans-grid reveal">
+          <div class="plan-card">
+            <h3 class="plan-name">Starter</h3>
+            <div class="plan-price">
+              <span class="price-amount">$2,499</span>
+              <span class="price-period">/per assessment</span>
+            </div>
+            <p class="plan-description">Perfect for small businesses starting their security journey</p>
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Basic penetration test
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Web application scan
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Executive summary report
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Email support
+              </li>
+            </ul>
+            <a href="/plans" class="btn btn-secondary plan-btn">Get Started</a>
+          </div>
+
+          <div class="plan-card plan-card-popular">
+            <div class="plan-badge">Most Popular</div>
+            <h3 class="plan-name">Pro</h3>
+            <div class="plan-price">
+              <span class="price-amount">$7,999</span>
+              <span class="price-period">/per month</span>
+            </div>
+            <p class="plan-description">Comprehensive security for growing organizations</p>
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Full penetration testing suite
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Continuous vulnerability scanning
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Quarterly security audits
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Priority support
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Compliance guidance
+              </li>
+            </ul>
+            <a href="/plans" class="btn btn-primary plan-btn">Get Started</a>
+          </div>
+
+          <div class="plan-card">
+            <h3 class="plan-name">Enterprise</h3>
+            <div class="plan-price">
+              <span class="price-amount">Custom</span>
+              <span class="price-period">/tailored pricing</span>
+            </div>
+            <p class="plan-description">End-to-end security partnership for large organizations</p>
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Unlimited assessments
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Dedicated security team
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                24/7 incident response
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Custom integrations
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Executive briefings
+              </li>
+              <li class="plan-feature">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Compliance certification support
+              </li>
+            </ul>
+            <a href="/plans" class="btn btn-secondary plan-btn">Contact Sales</a>
+          </div>
+        </div>
+
+        <div class="plans-cta">
+          <a href="/plans" class="link-primary">
+            View full plan comparison
+            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">Common Questions</h2>
+          <p class="section-description">Quick answers to help you get started</p>
+        </div>
+
+        <div class="faq-list reveal" id="faqList">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does a typical penetration test take?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>The duration varies based on scope, but most assessments take 1-3 weeks. We provide a detailed timeline after our initial discovery call and scope definition.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What happens if you find critical vulnerabilities?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Critical findings are reported immediately through our secure communication channel, allowing your team to begin remediation while we continue testing. We never wait until the final report to share urgent issues.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer ongoing security monitoring?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, our Pro and Enterprise plans include continuous vulnerability scanning and monitoring. We also offer standalone managed detection and response (MDR) services.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What compliance frameworks do you support?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>We support all major frameworks including ISO 27001, SOC 2, PCI DSS, HIPAA, GDPR, and NIST. Our team can help you prepare for audits and maintain ongoing compliance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do you ensure the confidentiality of our data?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>All engagements are covered by strict NDAs. Our team follows secure handling procedures, and all findings are transmitted through encrypted channels. We can also work within your air-gapped environments if required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cta">
+          <a href="/faq" class="link-primary">
+            View all FAQs
+            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="cta-background">
+        <div class="cta-gradient"></div>
+        <div class="cta-glow"></div>
+      </div>
+
+      <div class="container">
+        <div class="final-cta-content reveal">
+          <div class="cta-icon-wrapper">
+            <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+            </svg>
+          </div>
+
+          <h2 class="cta-title">Ready to harden your security posture?</h2>
+
+          <p class="cta-description">
+            Join 500+ organizations that trust SuffixSec to protect their digital assets. Book a free consultation with our security experts today.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary btn-lg neon-cyan">
+              Book a Security Call
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="/plans" class="btn btn-outline btn-lg">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+            </svg>
+            <span class="logo-text">Suffix<span class="text-primary">Sec</span></span>
+          </a>
+          <p class="footer-description">Enterprise-grade cybersecurity solutions that scale with your business. Trusted by leading companies worldwide.</p>
+          <div class="social-links">
+            <a href="https://twitter.com/suffixsec" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/company/suffixsec" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://github.com/suffixsec" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/plans">Plans</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/features#penetration-testing">Penetration Testing</a></li>
+            <li><a href="/features#security-audits">Security Audits</a></li>
+            <li><a href="/features#vulnerability-management">Vulnerability Management</a></li>
+            <li><a href="/features#incident-response">Incident Response</a></li>
+            <li><a href="/features#compliance">Compliance Readiness</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Contact Us</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <a href="mailto:support@suffixsec.com">support@suffixsec.com</a>
+            </li>
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+1-555-SEC-TEAM">+1 (555) SEC-TEAM</a>
+            </li>
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>123 Security Boulevard<br>San Francisco, CA 94102</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="currentYear"></span> SuffixSec. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
