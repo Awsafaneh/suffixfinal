@@ -18,6 +18,7 @@ const currentYearEl = document.getElementById("currentYear")
 let lastScrollY = window.scrollY
 
 function handleHeaderScroll() {
+  if (!header) return
   const currentScrollY = window.scrollY
 
   if (currentScrollY > 20) {
@@ -37,6 +38,7 @@ window.addEventListener("scroll", handleHeaderScroll)
 let overlay = null
 
 function openMobileMenu() {
+  if (!mobileMenu) return
   mobileMenu.classList.add("open")
   document.body.style.overflow = "hidden"
 
@@ -48,6 +50,7 @@ function openMobileMenu() {
 }
 
 function closeMobileMenu() {
+  if (!mobileMenu) return
   mobileMenu.classList.remove("open")
   document.body.style.overflow = ""
 
@@ -57,147 +60,164 @@ function closeMobileMenu() {
   }
 }
 
-mobileMenuBtn.addEventListener("click", openMobileMenu)
-mobileMenuClose.addEventListener("click", closeMobileMenu)
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener("click", openMobileMenu)
+}
+
+if (mobileMenuClose) {
+  mobileMenuClose.addEventListener("click", closeMobileMenu)
+}
 
 // Close menu on link click
-mobileMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMobileMenu)
-})
+if (mobileMenu) {
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu)
+  })
+}
 
 // ============================================
 // HIGHLIGHTS SLIDER
 // ============================================
-const slides = sliderTrack.querySelectorAll(".slide")
-const totalSlides = slides.length
-let currentSlide = 0
-let isAutoPlaying = true
-let autoPlayInterval = null
+if (sliderTrack && sliderDotsContainer && sliderPrev && sliderNext) {
+  const slides = sliderTrack.querySelectorAll(".slide")
+  const totalSlides = slides.length
+  let currentSlide = 0
+  let isAutoPlaying = true
+  let autoPlayInterval = null
 
-// Create dots
-function createDots() {
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("button")
-    dot.className = `slider-dot ${i === 0 ? "active" : ""}`
-    dot.setAttribute("aria-label", `Go to slide ${i + 1}`)
-    dot.addEventListener("click", () => goToSlide(i))
-    sliderDotsContainer.appendChild(dot)
+  // Create dots
+  function createDots() {
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button")
+      dot.className = `slider-dot ${i === 0 ? "active" : ""}`
+      dot.setAttribute("aria-label", `Go to slide ${i + 1}`)
+      dot.addEventListener("click", () => goToSlide(i))
+      sliderDotsContainer.appendChild(dot)
+    }
   }
-}
 
-function updateDots() {
-  const dots = sliderDotsContainer.querySelectorAll(".slider-dot")
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentSlide)
-  })
-}
+  function updateDots() {
+    const dots = sliderDotsContainer.querySelectorAll(".slider-dot")
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentSlide)
+    })
+  }
 
-function goToSlide(index) {
-  currentSlide = index
-  sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`
-  updateDots()
-}
+  function goToSlide(index) {
+    currentSlide = index
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`
+    updateDots()
+  }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides
-  goToSlide(currentSlide)
-}
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides
+    goToSlide(currentSlide)
+  }
 
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides
-  goToSlide(currentSlide)
-}
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides
+    goToSlide(currentSlide)
+  }
 
-function startAutoPlay() {
-  if (autoPlayInterval) clearInterval(autoPlayInterval)
-  autoPlayInterval = setInterval(() => {
-    if (isAutoPlaying) nextSlide()
-  }, 5000)
-}
+  function startAutoPlay() {
+    if (autoPlayInterval) clearInterval(autoPlayInterval)
+    autoPlayInterval = setInterval(() => {
+      if (isAutoPlaying) nextSlide()
+    }, 5000)
+  }
 
-function stopAutoPlay() {
-  isAutoPlaying = false
-}
+  function stopAutoPlay() {
+    isAutoPlaying = false
+  }
 
-function resumeAutoPlay() {
-  isAutoPlaying = true
-}
+  function resumeAutoPlay() {
+    isAutoPlaying = true
+  }
 
-// Initialize slider
-createDots()
-startAutoPlay()
+  // Initialize slider
+  createDots()
+  startAutoPlay()
 
-sliderPrev.addEventListener("click", prevSlide)
-sliderNext.addEventListener("click", nextSlide)
+  sliderPrev.addEventListener("click", prevSlide)
+  sliderNext.addEventListener("click", nextSlide)
 
-// Pause on hover
-const sliderContainer = document.querySelector(".slider")
-sliderContainer.addEventListener("mouseenter", stopAutoPlay)
-sliderContainer.addEventListener("mouseleave", resumeAutoPlay)
+  // Pause on hover
+  const sliderContainer = document.querySelector(".slider")
+  if (sliderContainer) {
+    sliderContainer.addEventListener("mouseenter", stopAutoPlay)
+    sliderContainer.addEventListener("mouseleave", resumeAutoPlay)
+  }
 
-// Touch support
-let touchStartX = 0
-let touchEndX = 0
+  // Touch support
+  let touchStartX = 0
+  let touchEndX = 0
 
-sliderTrack.addEventListener(
-  "touchstart",
-  (e) => {
-    touchStartX = e.changedTouches[0].screenX
-  },
-  { passive: true },
-)
+  sliderTrack.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX
+    },
+    { passive: true },
+  )
 
-sliderTrack.addEventListener(
-  "touchend",
-  (e) => {
-    touchEndX = e.changedTouches[0].screenX
-    handleSwipe()
-  },
-  { passive: true },
-)
+  sliderTrack.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX
+      handleSwipe()
+    },
+    { passive: true },
+  )
 
-function handleSwipe() {
-  const swipeThreshold = 50
-  const diff = touchStartX - touchEndX
+  function handleSwipe() {
+    const swipeThreshold = 50
+    const diff = touchStartX - touchEndX
 
-  if (diff > swipeThreshold) {
-    nextSlide()
-  } else if (diff < -swipeThreshold) {
-    prevSlide()
+    if (diff > swipeThreshold) {
+      nextSlide()
+    } else if (diff < -swipeThreshold) {
+      prevSlide()
+    }
   }
 }
 
 // ============================================
 // FAQ ACCORDION
 // ============================================
-faqItems.forEach((item) => {
-  const question = item.querySelector(".faq-question")
-  const answer = item.querySelector(".faq-answer")
+if (faqItems && faqItems.length > 0) {
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question")
+    const answer = item.querySelector(".faq-answer")
 
-  question.addEventListener("click", () => {
-    const isOpen = item.classList.contains("open")
+    if (question && answer) {
+      question.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open")
 
-    // Close all other items
-    faqItems.forEach((otherItem) => {
-      if (otherItem !== item) {
-        otherItem.classList.remove("open")
-        otherItem.querySelector(".faq-answer").style.maxHeight = "0"
-        otherItem.querySelector(".faq-question").setAttribute("aria-expanded", "false")
-      }
-    })
+        // Close all other items
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("open")
+            const otherAnswer = otherItem.querySelector(".faq-answer")
+            const otherQuestion = otherItem.querySelector(".faq-question")
+            if (otherAnswer) otherAnswer.style.maxHeight = "0"
+            if (otherQuestion) otherQuestion.setAttribute("aria-expanded", "false")
+          }
+        })
 
-    // Toggle current item
-    if (isOpen) {
-      item.classList.remove("open")
-      answer.style.maxHeight = "0"
-      question.setAttribute("aria-expanded", "false")
-    } else {
-      item.classList.add("open")
-      answer.style.maxHeight = answer.scrollHeight + "px"
-      question.setAttribute("aria-expanded", "true")
+        // Toggle current item
+        if (isOpen) {
+          item.classList.remove("open")
+          answer.style.maxHeight = "0"
+          question.setAttribute("aria-expanded", "false")
+        } else {
+          item.classList.add("open")
+          answer.style.maxHeight = answer.scrollHeight + "px"
+          question.setAttribute("aria-expanded", "true")
+        }
+      })
     }
   })
-})
+}
 
 // ============================================
 // SCROLL REVEAL ANIMATION
@@ -259,30 +279,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 })
 
 // ============================================
-// HIGHLIGHT ACTIVE NAV
+// CONTACT FORM HANDLING
 // ============================================
-function highlightActiveNav() {
-  const sections = document.querySelectorAll("section[id]")
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link")
+const contactForm = document.getElementById("contactForm")
 
-  let currentSection = ""
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 150
-    const sectionHeight = section.offsetHeight
+    // Get form data
+    const formData = new FormData(contactForm)
+    const data = Object.fromEntries(formData)
 
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      currentSection = section.getAttribute("id")
-    }
-  })
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active")
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active")
-    }
+    // Show success message (in a real app, you'd send this to a server)
+    alert("Thank you for your message! We'll get back to you within 24 hours.")
+    contactForm.reset()
   })
 }
-
-window.addEventListener("scroll", highlightActiveNav)
-window.addEventListener("load", highlightActiveNav)
