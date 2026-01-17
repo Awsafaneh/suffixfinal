@@ -216,6 +216,15 @@ function handleReveal() {
   })
 }
 
+// Run immediately on DOM load to ensure content is visible
+document.addEventListener("DOMContentLoaded", () => {
+  // Make all reveal elements visible immediately
+  document.querySelectorAll(".reveal").forEach((el) => {
+    el.classList.add("active")
+  })
+  handleReveal()
+})
+
 window.addEventListener("scroll", handleReveal)
 window.addEventListener("load", handleReveal)
 
@@ -227,6 +236,7 @@ if (currentYearEl) {
 }
 
 // ============================================
+// SMOOTH SCROLL FOR ANCHOR LINKS
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -248,6 +258,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   })
 })
 
+// ============================================
+// HIGHLIGHT ACTIVE NAV
+// ============================================
 function highlightActiveNav() {
   const sections = document.querySelectorAll("section[id]")
   const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link")
