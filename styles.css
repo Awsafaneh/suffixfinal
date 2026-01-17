@@ -388,6 +388,7 @@ body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+  z-index: 1; /* Added z-index: 1 to put grid-background behind content */
 }
 
 .grid-pattern {
@@ -435,6 +436,12 @@ body {
   50% {
     opacity: 0.8;
   }
+}
+
+.hero .container {
+  /* Added .hero .container to ensure content is above background */
+  position: relative;
+  z-index: 5;
 }
 
 .hero-content {
@@ -586,6 +593,7 @@ body {
   right: 0;
   height: 8rem;
   background: linear-gradient(to top, var(--background), transparent);
+  z-index: 2; /* Added z-index to hero-fade to be above grid but below content */
 }
 
 /* ============================================
