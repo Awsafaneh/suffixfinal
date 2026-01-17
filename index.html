@@ -11,15 +11,26 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Added top menu bar with page links -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <a href="index.html" class="top-bar-link active">Home</a>
+        <a href="features.html" class="top-bar-link">Features</a>
+        <a href="plans.html" class="top-bar-link">Plans</a>
+        <a href="faq.html" class="top-bar-link">FAQ</a>
+        <a href="contact.html" class="top-bar-link">Contact</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
       <nav class="nav">
+        <!-- Replaced SVG logo with image logo -->
         <a href="index.html" class="logo">
-          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-          </svg>
-          <span class="logo-text">Suffix<span class="text-primary">Sec</span></span>
+          <img src="/images/image.png" alt="SuffixSec Logo" class="logo-img">
         </a>
 
         <!-- Updated nav links to separate pages -->
@@ -65,11 +76,9 @@
   <main>
     <!-- Hero Section -->
     <section class="hero" id="home">
+      <!-- Removed glow-orb and vignette elements completely -->
       <div class="grid-background">
         <div class="grid-pattern"></div>
-        <div class="glow-orb glow-orb-1"></div>
-        <div class="glow-orb glow-orb-2"></div>
-        <div class="vignette"></div>
       </div>
 
       <div class="container">
@@ -119,7 +128,7 @@
         </div>
       </div>
 
-      <div class="hero-fade"></div>
+      <!-- Removed hero-fade -->
     </section>
 
     <!-- Trust Section -->
@@ -342,11 +351,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
+          <!-- Replaced SVG logo with image logo in footer -->
           <a href="index.html" class="footer-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-            </svg>
-            <span>Suffix<span class="text-primary">Sec</span></span>
+            <img src="/images/image.png" alt="SuffixSec Logo" class="footer-logo-img">
           </a>
           <p class="footer-tagline">Enterprise-grade security solutions that protect your business and give you peace of mind.</p>
         </div>
