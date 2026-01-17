@@ -7,6 +7,20 @@
   padding: 0;
 }
 
+/* Add global SVG constraints to prevent oversized icons */
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Default icon size - applies to all SVGs unless overridden */
+svg:not(.slide-icon):not(.step-icon) {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 :root {
   /* Colors */
   --background: #0b0f17;
@@ -209,9 +223,10 @@ body {
   text-decoration: none;
 }
 
+/* Update logo-icon to use !important to override global rule */
 .logo-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2rem !important;
+  height: 2rem !important;
   color: var(--primary);
   transition: filter 0.3s;
 }
@@ -289,9 +304,10 @@ body {
   cursor: pointer;
 }
 
+/* Update mobile-menu-btn svg */
 .mobile-menu-btn svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -340,9 +356,10 @@ body {
   cursor: pointer;
 }
 
+/* Update mobile-menu-close svg */
 .mobile-menu-close svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
 }
 
 .mobile-nav-link {
@@ -770,9 +787,10 @@ body {
   filter: blur(20px);
 }
 
+/* Update slide-icon size */
 .slide-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 4rem !important;
+  height: 4rem !important;
   color: var(--primary);
   position: relative;
   z-index: 1;
@@ -841,9 +859,10 @@ body {
   background-color: var(--background);
 }
 
+/* Update slider-btn svg */
 .slider-btn svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
 }
 
 .slider-btn-prev {
@@ -952,9 +971,10 @@ body {
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
 }
 
+/* Update feature-icon */
 .feature-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
   color: var(--primary);
 }
 
@@ -1053,9 +1073,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Update step-icon size */
 .step-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
   color: var(--primary);
 }
 
@@ -1107,9 +1128,10 @@ body {
   border: 2px solid var(--primary);
 }
 
+/* Update mobile-step-icon svg */
 .mobile-step-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
   color: var(--primary);
 }
 
