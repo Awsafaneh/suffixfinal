@@ -1710,3 +1710,26 @@ body {
     font-size: 0.75rem;
   }
 }
+
+/* =========================================================
+   ADDED OVERRIDE (بدون حذف أي شيء): إلغاء تثبيت الشريطين
+========================================================= */
+.top-bar,
+.header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+html {
+  scroll-padding-top: 0 !important;
+}
+
+.hero {
+  padding-top: 0 !important;
+}
+
+.page-header {
+  padding-top: 4rem !important;
+}
